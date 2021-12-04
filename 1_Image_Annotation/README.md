@@ -37,7 +37,7 @@ First create a new tag on the right and give it a relevant tag name. In our exam
 ![New Project](/1_Image_Annotation/Screen_Recordings/Labeling.gif)
 
 ### Export Results
-Once you have labeled enough images press **CRTL+E** to export the project. You should now see a folder called [`vott-csv-export`](/Data/Source_Images/Training_Images/vott-csv-export) in the [`Training_Images`](/Data/Source_Images/Training_Images) directory. Within that folder, you should see a `*.csv` file called [`Annotations-export.csv`](/Data/Source_Images/Training_Images/vott-csv-export/Annotations-export.csv) which contains file names and bounding box coordinates. 
+Once you have labeled enough images press **CRTL+E** to export the project. You should now see a folder called [`annotations`](/Data/Source_Images/Training_Images/annotations) in the [`Training_Images`](/Data/Source_Images/Training_Images) directory. Within that folder, you should see a `*.csv` file called [`Annotations-export.csv`](/Data/Source_Images/Training_Images/annotations/Annotations-export.csv) which contains file names and bounding box coordinates. 
 
 ## Convert to YOLO Format
 As a final step, convert the VoTT csv format to the YOLOv3 format. To do so, run the conversion script from within the [`TrainYourOwnYOLO/1_Image_Annotation`](/1_Image_Annotation/) folder:
@@ -45,7 +45,7 @@ As a final step, convert the VoTT csv format to the YOLOv3 format. To do so, run
 ```
 python Convert_to_YOLO_format.py
 ```
-The script generates two output files: [`data_train.txt`](/Data/Source_Images/Training_Images/vott-csv-export/data_train.txt) located in the [`TrainYourOwnYOLO/Data/Source_Images/Training_Images/vott-csv-export`](/Data/Source_Images/Training_Images/vott-csv-export) folder and [`data_classes.txt`](/Data/Model_Weights/data_classes.txt) located in the [`TrainYourOwnYOLO/Data/Model_Weights`](/Data/Model_Weights/) folder. To list available command line options run `python Convert_to_YOLO_format.py -h`.
+The script generates two output files: [`data_train.txt`](/Data/Source_Images/Training_Images/annotations/data_train.txt) located in the [`TrainYourOwnYOLO/Data/Source_Images/Training_Images/annotations`](/Data/Source_Images/Training_Images/annotations) folder and [`data_classes.txt`](/Data/Model_Weights/data_classes.txt) located in the [`TrainYourOwnYOLO/Data/Model_Weights`](/Data/Model_Weights/) folder. To list available command line options run `python Convert_to_YOLO_format.py -h`.
 
 ### That's all for annotation! 
 Next, go to [`TrainYourOwnYOLO/2_Training`](/2_Training) to train your YOLOv3 detector.

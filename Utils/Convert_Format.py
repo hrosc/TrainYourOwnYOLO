@@ -191,7 +191,7 @@ if __name__ == "__main__":
         )
     )
     multi_df = pd.read_csv(
-        "C:/Users/Anton/Documents/Insight/eq/EQ_new/Train_Housing_detector/2/vott-csv-export/Housing_cropping-export.csv"
+        "C:/Users/Anton/Documents/Insight/eq/EQ_new/Train_Housing_detector/2/annotations/Housing_cropping-export.csv"
     )
     multi_df.drop_duplicates(subset=None, keep="first", inplace=True)
     convert_vott_csv_to_yolo(
